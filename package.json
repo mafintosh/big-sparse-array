@@ -1,0 +1,21 @@
+{
+  "name": "big-sparse-array",
+  "version": "0.0.0",
+  "description": "A sparse array optimised for low memory whilst still being fast",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "tape": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/big-sparse-array.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/big-sparse-array/issues"
+  },
+  "homepage": "https://github.com/mafintosh/big-sparse-array"
+}
