@@ -17,13 +17,15 @@ module.exports = class BigSparseArray {
   }
 
   set (index, val) {
-    while (val !== undefined && index >= this.maxLength) {
-      this.maxLength *= 4096
-      this.factor++
-      if (!this.tiny.isEmptyish()) {
-        const t = new TinyArray()
-        t.set(0, this.tiny)
-        this.tiny = t
+    if (val !== undefined) {
+      while (index >= this.maxLength) {
+        this.maxLength *= 4096
+        this.factor++
+        if (!this.tiny.isEmptyish()) {
+          const t = new TinyArray()
+          t.set(0, this.tiny)
+          this.tiny = t
+        }
       }
     }
 
