@@ -34,7 +34,7 @@ module.exports = class BigSparseArray {
 
     let tiny = this.tiny
     for (let i = 0; i < last; i++) {
-      const next = this.tiny.get(f[i])
+      const next = tiny.get(f[i])
       if (next === undefined) {
         if (val === undefined) return
         tiny = tiny.set(f[i], new TinyArray())
