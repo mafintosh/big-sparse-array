@@ -1,6 +1,6 @@
 {
   "name": "big-sparse-array",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A sparse array optimised for low memory whilst still being fast",
   "main": "index.js",
   "dependencies": {},
