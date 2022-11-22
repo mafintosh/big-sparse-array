@@ -32,7 +32,7 @@ test('grow', function (t) {
   t.is(missing, 0)
 })
 
-test('overflow', function (t) {
+test('bounds', function (t) {
   const b = new BigSparseArray()
 
   b.set(0, true)
