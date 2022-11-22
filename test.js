@@ -1,24 +1,22 @@
-const tape = require('tape')
+const test = require('brittle')
 const BigSparseArray = require('./')
 
-tape('basic', function (t) {
+test('basic', function (t) {
   const b = new BigSparseArray()
 
   b.set(42, true)
-  t.same(b.get(42), true)
+  t.is(b.get(42), true)
 
   b.set(42, 42)
-  t.same(b.get(42), 42)
+  t.is(b.get(42), 42)
 
   b.set(42424242424242, 'big')
-  t.same(b.get(42424242424242), 'big')
-  t.same(b.get(42424242424243), undefined)
-  t.same(b.get(42), 42)
-
-  t.end()
+  t.is(b.get(42424242424242), 'big')
+  t.is(b.get(42424242424243), undefined)
+  t.is(b.get(42), 42)
 })
 
-tape('grow', function (t) {
+test('grow', function (t) {
   const b = new BigSparseArray()
 
   for (let i = 0; i < 10000; i++) {
@@ -31,6 +29,5 @@ tape('grow', function (t) {
     if (b.get(i) === i) missing--
   }
 
-  t.same(missing, 0)
-  t.end()
+  t.is(missing, 0)
 })
