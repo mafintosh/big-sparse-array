@@ -47,6 +47,8 @@ module.exports = class BigSparseArray {
   }
 
   get (index) {
+    if (index >= this.maxLength) return
+
     const f = factor4096(index, this.factor)
     const last = this.factor - 1
 
