@@ -31,3 +31,11 @@ test('grow', function (t) {
 
   t.is(missing, 0)
 })
+
+test('overflow', function (t) {
+  const b = new BigSparseArray()
+
+  b.set(0, true)
+
+  t.is(b.get(4096), undefined)
+})
